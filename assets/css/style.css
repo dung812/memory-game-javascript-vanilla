@@ -1,0 +1,164 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 20px 0;
+  background: #1b1523;
+  font-family: "Poppins", sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.wrap {
+  color: white;
+}
+
+#title {
+  font-weight: 600;
+}
+
+#btn-new {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+#btn-new:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+.grid {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.grid .card {
+  margin: 5px;
+  background-color: #1b1523;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 115px;
+  width: 115px;
+  cursor: pointer;
+}
+.grid .card.matched {
+  border: 0;
+  background-image: none !important;
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  background: none !important;
+}
+
+.card,
+.back,
+.front {
+  height: 115px;
+  width: 115px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.front {
+  background: url("../img/cover.png") no-repeat center center/contain;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.matched .front {
+  background: #1b1523 !important;
+}
+
+.wrap-turns {
+  color: white;
+}
+
+.result {
+  text-align: center;
+  color: white;
+}
+.result img {
+  margin: 0 auto 25px;
+}
+
+/*# sourceMappingURL=style.css.map */
